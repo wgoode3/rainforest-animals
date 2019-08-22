@@ -1,0 +1,20 @@
+<p>edit works!</p>
+
+<form (submit)="updateAnimal()">
+    <p>
+        Name: 
+        <input name="animal.name" [(ngModel)]="animal.name" type="text" />&nbsp;
+        <span *ngIf="errors.name">{{ errors.name.message }}</span>
+    </p>
+    <p>
+        Species:
+        <input name="animal.species" [(ngModel)]="animal.species" type="text" />&nbsp;
+        <span *ngIf="errors.species">{{ errors.species.message }}</span>
+    </p>
+    <p>
+        Age:
+        <input name="animal.age" [(ngModel)]="animal.age" type="number" />&nbsp;
+        <span *ngIf="errors.age">{{ errors.age.message }}</span>
+    </p>
+    <button type="submit">Add Animal</button>
+</form>

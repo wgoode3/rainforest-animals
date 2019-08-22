@@ -1,0 +1,9 @@
+<input type="search" name="q" [(ngModel)]="q" (ngModelChange)="s($event)" />
+
+<div *ngFor="let animal of filter">
+    <p>Name: {{ animal.name }}</p>
+    <p>Species: {{ animal.species }}</p>
+    <p>Age: {{ animal.age }}</p>
+    <p><button [routerLink]="['edit', animal._id]">Edit</button></p>
+    <hr>
+</div>
